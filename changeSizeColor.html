@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <label for="">Change Font Size</label>
+        <select id="fontSize" onchange="changeFontSize()">
+            <option value="1em">1x</option>
+            <option value="2em">2x</option>
+            <option value="3em">3x</option>
+            <option value="4em">4x</option>
+        </select>
+        <label for="">Change Font Color</label>
+        <select id="fontColor" onchange="changeFontColor()">
+            <option value="black">Black</option>
+            <option value="blue">blue</option>
+            <option value="grey">Grey</option>
+            <option value="red">red</option>
+        </select>
+
+
+
+        <p id="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum assumenda ipsum unde
+            quisquam,
+            neque dolor atque nihil maxime iste eligendi excepturi porro minus velit molestias libero officiis est
+            similique
+            earum quis necessitatibus tempore! Corrupti, ducimus molestiae amet quibusdam rerum a.</p>
+    </div>
+
+
+    <script>
+        function changeFontSize() {
+            document.getElementById("paragraph").style.fontSize = document.getElementById("fontSize").value;
+        }
+
+        function changeFontColor() {
+            document.getElementById("paragraph").style.color = document.getElementById("fontColor").value;
+        }
+    </script>
+</body>
+
+</html>
