@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+</head>
+<style>
+    form{
+        position: fixed;
+        top: 100px;
+        left: 37%;
+        width: 25%;
+        margin: 0 auto;
+        padding: 30px;
+        border: 2px solid #eaeaea;
+        border-radius: 10px;
+        font-family:'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        box-sizing: border-box;
+        color: #444444;
+
+    }
+    
+    form h1{
+        text-align: center;
+    }
+    form input{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+
+    }
+    form .submit{
+        width: 20%;
+        padding: 10px 0;
+        border-radius: none;
+        /* text-align: center; */
+    }
+    .underline{
+        border-bottom: 2px solid #eaeaea;
+        margin: 10px 0;
+    }
+    form label{
+    }
+</style>
+<body>
+    <form action="" name="formku" onsubmit="return validasi()">
+        <h1>Silahkan Login</h1>
+        
+        <label for="">Username</label><br>
+        <div class="underline">
+            <input type="text" name="username"  ><br>
+        </div>
+        <label for="">Password</label><br>
+        <div class="underline">
+            <input type="password" name="password" ><br>
+        </div>
+        <input type="submit" class="submit">
+    </form>
+
+
+<script>
+    function validasi(){
+        window.location('ubah_text.html');
+    }
+</script>
+</body>
+</html>

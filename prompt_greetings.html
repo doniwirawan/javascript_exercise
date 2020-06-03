@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="submit" onclick="myFunction()" id="button">munculkan prompt</button>
+
+    <script>
+
+        function myFunction(){
+           var test = window.confirm('apakah anda yakin?');
+
+           var waktu = new Date();
+
+           var jam = waktu.getHours();
+
+            if(test == true){
+
+                var username = prompt('Masukkan nama anda :');   
+
+                if(jam>=6 && jam<=11){
+
+                    alert(`selamat pagi ${username}`);
+
+                }else if(jam>=12 && jam<=14){
+
+                    alert(`selamat siang ${username}`);
+
+                }else if(jam>=15 && jam<=20){
+
+                    alert(`selamat sore ${username}`);
+
+                }else{
+
+                    alert(`selamat malam ${username}`);
+                }
+            }
+            
+        }
+        
+    </script>
+
+</body>
+</html>
