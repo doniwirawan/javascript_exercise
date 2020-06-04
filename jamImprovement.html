@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cara untuk refresh setiap detik -->
+    <meta http-equiv="refresh" content="1;">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .quote {
+        font-family: 'Pinyon Script', cursive;
+    }
+
+    .box {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(26, 26, 26);
+        color: rgb(233, 233, 233);
+        position: fixed;
+    }
+
+    #demo {
+        font-size: 12em;
+
+    }
+
+    #demo2 {
+        margin-bottom: 20px;
+        margin-top: -10px;
+        font-size: 1.5em;
+        font-family: 'Playfair Display SC', serif;
+        font-weight: bold;
+
+
+    }
+
+    .todayHours {
+        font-size: 4em;
+        margin-top: 80px;
+        font-family: 'Playfair Display SC', serif;
+        font-weight: lighter;
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .box {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(26, 26, 26);
+            color: rgb(233, 233, 233);
+            position: fixed;
+        }
+
+        #demo {
+            font-size: 6em;
+
+        }
+
+        #demo2 {
+            margin-bottom: 20px;
+            margin-top: -10px;
+            font-size: .8em;
+            font-family: 'Playfair Display SC', serif;
+            font-weight: bold;
+
+
+        }
+
+        .todayHours {
+            font-size: 2em;
+            margin-top: 150px;
+            font-family: 'Playfair Display SC', serif;
+
+        }
+        .quote{
+            font-size: .7em;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="box">
+        <p class="todayHours">Today Hours</p>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p class="quote">-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, assumenda. --</p>
+    </div>
+
+
+    <script>
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        var d = new Date();
+        var x = document.getElementById("demo");
+        var h = addZero(d.getHours());
+        var m = addZero(d.getMinutes());
+        var s = addZero(d.getSeconds());
+        x.innerHTML = h + ":" + m + ":" + s;
+
+        function getDayName(dateStr, locale) {
+            var date = new Date(dateStr);
+            return date.toLocaleDateString(locale, {
+                weekday: 'long'
+            });
+        }
+
+        var dateStr = '06/04/2020';
+        var day = getDayName(dateStr, "id-ID");
+        var x = document.getElementById('demo2').innerText = `-- ${day} --`;
+
+        var title = document.title=`Today Hours = ${h} : ${m}`;
+    </script>
+</body>
+
+</html>
