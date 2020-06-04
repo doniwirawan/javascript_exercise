@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping array</title>
+</head>
+<style>
+    .red{
+        color: #770000;
+    }
+    .blue{
+        color: blue;
+    }
+</style>
+<body>
+    <h1 id="demo" class="red">Hello world</h1>
+    <button id="tombol" onclick="myFunction()">Ini tombol</button>
+    <script>
+       function myFunction(){
+           var x = document.getElementById('demo');
+           if(x.className === 'red'){
+               x.className += ' blue';
+           }else{
+               x.className = 'red';
+           }
+       }
+    </script>
+</body>
+
+</html>
