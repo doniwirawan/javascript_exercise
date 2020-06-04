@@ -138,6 +138,7 @@
 
 
     <script>
+        var myVar = setInterval(function(){myTimer()}, 1000);
         
         var quotes = ["Blank",
             "\"Dude, suckin' at something is the first step at being sorta good at something.\"<br>-  Jake <small><em>(Adventure Time)</em></small>",
@@ -165,9 +166,6 @@
             }
             return i;
         }
-        var myVar = setInterval(function () {
-            myTimer()
-        }, 1000);
 
         function myTimer() {
             var d = new Date();
@@ -176,8 +174,15 @@
             var m = addZero(d.getMinutes());
             var s = addZero(d.getSeconds());
             x.innerHTML = h + ":" + m + ":" + s ;
-        }
+            var title = document.title = ` ${h} : ${m}`;
 
+        }
+        var dateStr = '06/04/2020';
+        var day = getDayName(dateStr, "id-ID");
+
+        var x = document.getElementById('demo2').innerText = `-- ${day} --`;
+
+        
         function getDayName(dateStr, locale) {
             var date = new Date(dateStr);
             return date.toLocaleDateString(locale, {
@@ -185,11 +190,9 @@
             });
         }
 
-        var dateStr = '06/04/2020';
-        var day = getDayName(dateStr, "id-ID");
-        var x = document.getElementById('demo2').innerText = `-- ${day} --`;
+        console.log(title);
 
-        var title = document.title = ` ${h} : ${m}`;
+        
     </script>
 </body>
 
