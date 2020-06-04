@@ -133,7 +133,7 @@
         <p class="quote" id="quote">-- Dude, suckin' at something is the first step at being sorta good at
             something."<br>- Jake <small><em>(Adventure Time)</em></small> --
         </p>
-        <a id="gen" onclick="genQuote()">New Quote</a>
+        <a id="gen" onclick="return genQuote()">New Quote</a>
     </div>
 
 
@@ -144,13 +144,18 @@
             }
             return i;
         }
+        var myVar = setInterval(function () {
+            myTimer()
+        }, 1000);
 
-        var d = new Date();
-        var x = document.getElementById("demo");
-        var h = addZero(d.getHours());
-        var m = addZero(d.getMinutes());
-        var s = addZero(d.getSeconds());
-        x.innerHTML = h + ":" + m ;
+        function myTimer() {
+            var d = new Date();
+            var x = document.getElementById("demo");
+            var h = addZero(d.getHours());
+            var m = addZero(d.getMinutes());
+            var s = addZero(d.getSeconds());
+            x.innerHTML = h + ":" + m + ":" + s ;
+        }
 
         function getDayName(dateStr, locale) {
             var date = new Date(dateStr);
@@ -163,13 +168,13 @@
         var day = getDayName(dateStr, "id-ID");
         var x = document.getElementById('demo2').innerText = `-- ${day} --`;
 
-        var title = document.title = `Today Hours = ${h} : ${m}`;
+        var title = document.title = ` ${h} : ${m}`;
+
 
         function genQuote() {
-            var randNum = Math.floor(Math.random() * 8) + 1;
-            document.getElementById('quote').innerHTML = quotes[randNum];
+            var random = Math.floor(Math.random() * 2) + 1;
+            document.getElementById('quote').innerHTML = quotes[random];
         }
-
 
 
         var quotes = ["Blank",
