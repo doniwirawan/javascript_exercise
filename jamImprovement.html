@@ -138,6 +138,14 @@
 
 
     <script>
+        // function Hari(){
+
+            var dateStr = '06/05/2020';
+            var day = getDayName(dateStr, "id-ID");
+
+            var x = document.getElementById('demo2').innerText = `-- ${day} --`;
+        // }
+
         var myVar = setInterval(function(){myTimer()}, 1000);
         
         var quotes = ["Blank",
@@ -152,7 +160,7 @@
         ];
 
         function genQuote() {
-            var random = Math.floor(Math.random() * 2) + 1;
+            var random = Math.floor(Math.random() * 8) + 1;
             document.getElementById('quote').innerHTML = quotes[random];
         }
 
@@ -177,10 +185,7 @@
             var title = document.title = ` ${h} : ${m}`;
 
         }
-        var dateStr = '06/04/2020';
-        var day = getDayName(dateStr, "id-ID");
-
-        var x = document.getElementById('demo2').innerText = `-- ${day} --`;
+        
 
         
         function getDayName(dateStr, locale) {
