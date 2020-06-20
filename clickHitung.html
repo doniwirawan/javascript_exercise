@@ -3,18 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>click counter</title>
 </head>
 
 <body>
-    <button id="btn" onclick="myFunction()">Klik</button>
+    <button id="btn" onclick="myFunction()">Kliks</button>
     <p id="count"></p>
 
     <script>
     var counts = 0;
     function myFunction() {
         counts += 1;
-        document.getElementById('count').innerHTML = counts;
+        if(counts >=10){
+        	document.getElementById('count').style.color="blue";
+        }else if(counts >= 50){
+        	document.getElementById('count').style.color="blueviolet";
+        }else if (counts >= 100){
+        	document.getElementById('count').style.color="red";
+        }else{
+        	document.getElementById('count').style.color="black";
+        }
+
+        document.getElementById('count').innerHTML = `Anda telah mengklik sebanyak : ${counts} X`;
     }
     </script>
 </body>

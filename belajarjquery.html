@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ex, qui eligendi nesciunt. Molestias nihil in, tenetur quasi, consequatur accusantium!</p>
+    <p class="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ex, qui eligendi nesciunt. Molestias nihil in, tenetur quasi, consequatur accusantium!</p>
+    <p class="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ex, qui eligendi nesciunt. Molestias nihil in, tenetur quasi, consequatur accusantium!</p>
+    <button id="btn">klik toggle</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+		$('document').ready(function(){
+			$('#btn').on("click",function(){
+				var x = $('.demo').toggle(1000);
+				console.log(x)
+			})
+
+		})
+    </script>
+</body>
+
+</html>

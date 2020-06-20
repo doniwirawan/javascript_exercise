@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+.hidden {
+    display: none;
+}
+</style>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ipsam expedita praesentium pariatur eligendi unde autem reprehenderit veritatis, repudiandae sapiente.</p>
+    <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ratione quasi animi, beatae, quas ab nostrum placeat corporis soluta tenetur.</p>
+    <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ratione quasi animi, beatae, quas ab nostrum placeat corporis soluta tenetur.</p>
+    <button id="btn">Show more...</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $('window').ready(function() {
+
+        $('#btn').click(function() {
+
+            $('.hidden').toggle(1000, function() {
+            })
+        })
+    });
+    </script>
+</body>
+
+</html>
