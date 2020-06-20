@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-5.2.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar " id="navbarResponsive">
+        <a href="" class="active">Home</a>
+        <a href="" class="button" onclick="return myFunction()" ref="javascript:void(0);"><i class="fa fa-bars fa-2x"></i></a>
+        <div class="nav-wrap " id="wrap">
+            <a href="" class="">About Us</a>
+            <a href="" class="">Our Product</a>
+            <a href="" class="">Gallery</a>
+            <a href="" class="">Contact Us</a>
+        </div>
+    </nav>
+    <script src="fontawesome-5.2.0/js/all.js"></script>
+    <script>
+    function myFunction() {
+    	console.log('test');
+        var x = document.getElementById("navbarResponsive");
+        var y = document.getElementById("wrap");
+        if (x.className === "navbar" && y.className=== "nav-wrap") {
+            x.className += " responsive";
+            y.className += " responsive";
+
+        } else {
+            x.className = "navbar";
+            y.className = "nav-wrap";
+
+        }
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="myFunction()">Klik</button>
+    <p id="count"></p>
+
+    <script>
+    var counts = 0;
+    function myFunction() {
+        counts += 1;
+        document.getElementById('count').innerHTML = counts;
+    }
+    </script>
+</body>
+
+</html>
