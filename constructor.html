@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>constructor</title>
+</head>
+<body>
+	<script>
+		class penjumlahan {
+			constructor(angka1, angka2){
+				this.angka1 = angka1;
+				this.angka2 = angka2;
+			}
+			jumlahkan(){
+				return this.angka2 + this.angka1;
+			}
+			perkalian(){
+				return this.angka1 * this.angka2;
+			}
+			pembagian(){
+				this.angka1 / this.angka2;
+			}
+		}
+		angkaku = new penjumlahan(10,10);
+		console.log(angkaku.perkalian());
+
+	</script>
+	
+</body>
+</html>
