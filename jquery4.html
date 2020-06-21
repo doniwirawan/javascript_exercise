@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">Muncul Tulisan</button>
+	<p id="demo"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$('documet').ready(function(){
+			$('#btn').on('click',function(){
+				$('#demo').html(`<h1>Hello World</h1>`).slideUp(5000);
+			})
+		})
+	</script>
+</body>
+</html>

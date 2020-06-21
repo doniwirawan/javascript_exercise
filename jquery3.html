@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="nama">Nama :</label>
+    <input id="value" type="text" placeholder="Masukkan Nama Anda Disini">
+    <input type="submit" id="btn">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $('window').ready(function() {
+        $('#btn').on({
+            click: function(e) {
+                var x = $('#value').val();
+                alert(x);
+            },
+            keydown: function() {
+                var x = $('#value').val();
+                alert(x);
+            }
+
+        });
+    });
+    </script>
+</body>
+
+</html>
